@@ -1,0 +1,210 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* 수직 정렬 */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Main Content Styles */
+main {
+  padding: 30px 0;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #1f2937;
+}
+
+/* Button Styles */
+/* 로그인 버튼 스타일 */
+.login-btn {
+  font-size: 12px; /* 글씨 크기 */
+  color: gray; /* 글씨 색상 */
+  background: none; /* 배경 제거 (필요 시) */
+  border: none; /* 테두리 제거 */
+  cursor: pointer; /* 마우스 커서 변경 */
+  padding: 0; /* 안쪽 여백 제거 */
+}
+.login-btn:hover {
+  background: none;
+}
+
+button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Tabs */
+.tabs .tab-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tab-btn {
+  background-color: #e5e7eb;
+  color: #4b5563;
+}
+
+.tab-btn.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Card Styles */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.card-header #open-add-fee-modal-btn {
+  margin-left: auto; /* 왼쪽 여백을 최대로 해서 오른쪽 끝으로 밀기 */
+}
+
+.card-content {
+  padding: 15px;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f9fafb;
+}
+
+.fee-paid {
+  color: green;
+}
+
+.fee-unpaid {
+  color: red;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal input,
+.modal select {
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+/* 등록금 수납 버튼 스타일 */
+#open-add-fee-modal-btn {
+  background: none; /* 배경 제거 */
+  color: #6b7280; /* 회색 글씨 */
+  border: none; /* 테두리 회색 */
+  padding: 8px 12px; /* 버튼 패딩 */
+  cursor: pointer; /* 마우스 커서 변경 */
+  transition: all 0.3s;
+}
+
+#open-add-fee-modal-btn:hover {
+  background-color: #f3f4f6; /* 호버 시 배경색 */
+  border-color: #9ca3af; /* 테두리 색상 변경 */
+}

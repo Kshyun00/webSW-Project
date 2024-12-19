@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>드림인 수학영어</title>
+    <link rel="stylesheet" href="/styles/studentMangement.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <script src="header.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav-container">
+        <div class="logo">
+          <a href="/">드림인 수학영어</a>
+        </div>
+        <div class="nav-links">
+          <a href="/">학원 소개</a>
+          <a href="/programs.html">수업 프로그램</a>
+          <a href="/qna.html">질의응답</a>
+          <a href="/dashboard.html">수강생 관리</a>
+        </div>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </nav>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="/">학원 소개</a>
+        <a href="/programs.html">수업 프로그램</a>
+        <a href="/qna.html">질의응답</a>
+        <a href="/dashboard.html">수강생 관리</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="header-section">
+        <h1>수강생 관리</h1>
+        <button id="add-student-btn">학생 추가</button>
+      </div>
+
+      <div class="tabs">
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="students">학생 목록</button>
+          <button class="tab-btn" data-tab="fees">등록금 현황</button>
+        </div>
+
+        <div id="students-tab" class="tab-content active">
+          <div class="card">
+            <div class="card-header">
+              <h2>학생 목록</h2>
+              <select id="grade-filter">
+                <option value="all">전체</option>
+                <option value="중1">중1</option>
+                <option value="중2">중2</option>
+                <option value="중3">중3</option>
+                <option value="고1">고1</option>
+                <option value="고2">고2</option>
+                <option value="고3">고3</option>
+              </select>
+            </div>
+            <div class="card-content">
+              <table id="students-table">
+                <thead>
+                  <tr>
+                    <th>이름</th>
+                    <th>학년</th>
+                    <th>이메일</th>
+                    <th>전화번호</th>
+                    <th>관리</th>
+                  </tr>
+                </thead>
+                <tbody id="students-body">
+                  <!-- Students will be dynamically added here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div id="fees-tab" class="tab-content">
+          <div class="card">
+            <div class="card-header">
+              <h2>등록금 현황</h2>
+              <button id="open-add-fee-modal-btn">등록금 수납</button>
+              <select id="month-filter">
+                <option value="">월</option>
+                <option value="01">1월</option>
+                <option value="02">2월</option>
+                <option value="03">3월</option>
+                <option value="04">4월</option>
+                <option value="05">5월</option>
+                <option value="06">6월</option>
+                <option value="07">7월</option>
+                <option value="08">8월</option>
+                <option value="09">9월</option>
+                <option value="10">10월</option>
+                <option value="11">11월</option>
+                <option value="12">12월</option>
+              </select>
+            </div>
+            <div class="card-content">
+              <table id="fees-table">
+                <thead>
+                  <tr>
+                    <th>이름</th>
+                    <th>학년</th>
+                    <th>납부일</th>
+                    <th>금액</th>
+                    <th>관리</th>
+                  </tr>
+                </thead>
+                <tbody id="fees-body">
+                  <!-- Fee data will be dynamically added here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div id="add-fee-modal" class="modal">
+          <div class="modal-content">
+            <h2>등록금 수납</h2>
+            <form id="add-fee-form">
+              <input type="text" name="name" placeholder="이름" required />
+              <input type="number" name="amount" placeholder="금액" required />
+              <select name="student_grade" required>
+                <option value="중1">중1</option>
+                <option value="중2">중2</option>
+                <option value="중3">중3</option>
+                <option value="고1">고1</option>
+                <option value="고2">고2</option>
+                <option value="고3">고3</option>
+              </select>
+              <input
+                type="text"
+                name="period"
+                placeholder="납부일 (연월)"
+                required
+              />
+              <button type="submit">수납</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Student Add Modal -->
+    <div id="add-student-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>새 학생 추가</h2>
+          <button id="close-modal-btn">&times;</button>
+        </div>
+        <form id="add-student-form">
+          <input type="email" name="email" placeholder="이메일" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="비밀번호"
+            required
+          />
+          <input type="text" name="name" placeholder="이름" required />
+          <select name="grade" required>
+            <option value="">학년 선택</option>
+            <option value="중1">중1</option>
+            <option value="중2">중2</option>
+            <option value="중3">중3</option>
+            <option value="고1">고1</option>
+            <option value="고2">고2</option>
+            <option value="고3">고3</option>
+          </select>
+          <input type="tel" name="phone" placeholder="전화번호" required />
+          <button type="submit">추가</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">© 2024 드림인 수학영어. All rights reserved.</div>
+    </footer>
+
+    <script src="studentManagement.js"></script>
+  </body>
+</html>

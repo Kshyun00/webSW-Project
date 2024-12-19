@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우리 학원</title>
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <script defer src="scripts.js"></script>
+    <script src="header.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav-container">
+        <div class="logo">
+          <a href="/">드림인 수학영어</a>
+        </div>
+        <div class="nav-links">
+          <button id="authButton" class="login-btn">로그인</button>
+          <a href="#about">학원 소개</a>
+          <a href="/programs.html">수업 프로그램</a>
+          <a href="/qna.html">질의응답</a>
+          <a href="/dashboard.html">수강생 관리</a>
+        </div>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </nav>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#about">학원 소개</a>
+        <a href="/programs.html">수업 프로그램</a>
+        <a href="/qna.html">질의응답</a>
+        <a href="/dashboard.html">수강생 관리</a>
+        <button id="authButton" class="login-btn">로그인</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <section class="hero">
+        <h1>AI를 적극 활용한 교육 시스템</h1>
+        <p>우리 학원에서 최고의 교육을 경험하세요</p>
+        <a href="/programs.html" class="button">프로그램 살펴보기 ></a>
+      </section>
+
+      <section id="about" class="about">
+        <h2>학원 소개</h2>
+        <div class="about-content">
+          <div>
+            <h3>우리의 비전</h3>
+            <p>
+              학생 개개인의 잠재력을 최대한 발휘하도록 돕는 것이 우리의
+              목표입니다. 우리 학원은 학업적인 성취뿐만 아니라 자신감과 자기
+              주도 학습 능력을 키우는 데 중점을 둡니다. 미래 사회의 리더로
+              성장할 수 있도록, 창의력과 문제 해결 능력을 함께 키워
+              나가겠습니다.
+            </p>
+          </div>
+          <div>
+            <h3>교육 철학</h3>
+            <p>
+              우리 학원의 교육 철학은 개개인의 특성과 학습 스타일에 맞춘 맞춤형
+              학습입니다. 학생마다 학습 속도와 이해도가 다르다는 점을 고려하여,
+              개별 맞춤형 커리큘럼과 소그룹 학습을 병행합니다. 뿐만 아니라 AI
+              학습 도우미를 활용하여 학습 효과를 극대화합니다. 학생들은 어려운
+              문제를 만났을 때 AI 학습 도우미와 실시간으로 대화하며 이해도를
+              높이고, 추가 연습 문제를 받아볼 수 있습니다. 이를 통해 자신만의
+              속도로 학습을 진행할 수 있고, 부족한 부분은 즉각적인 피드백을 통해
+              보완할 수 있습니다.
+            </p>
+          </div>
+          <div>
+            <h3>AI 학습 도우미</h3>
+            <p>
+              실시간 피드백: 학생이 질문을 하면 바로 힌트를 제공하고, 완전한
+              답을 이해하도록 도와줍니다. 연습 문제 제공: AI는 학생의 학습
+              상태를 분석하여 난이도에 맞는 연습 문제를 제공합니다. 자기 주도
+              학습 지원: 학생 스스로 답을 찾고 문제를 해결하도록 유도하여
+              주도적인 학습 습관을 길러줍니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="programs" class="programs">
+        <h2>수업 프로그램</h2>
+        <div class="programs-cards">
+          <div class="card">
+            <h3>중등 과정</h3>
+            <p>실력 향상을 위한 심화 학습</p>
+            <ul>
+              <li>영어, 수학 심화</li>
+              <li>논술 및 발표 능력 향상</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>고등 과정</h3>
+            <p>대학 입시를 위한 집중 교육</p>
+            <ul>
+              <li>수능 대비 집중 학습</li>
+              <li>논술 및 구술 면접 대비</li>
+              <li>학생부 종합 전형 준비</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="faq">
+        <h2>자주 묻는 질문</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-title">
+              수업 시간은 어떻게 되나요?<span class="icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              평일 오후 2시부터 10시까지, 주말 오전 9시부터 오후 6시까지
+              운영됩니다.
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-title">
+              수강료는 어떻게 되나요?<span class="icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              수강료는 과목 수와 수업 시간에 따라 다릅니다. 자세한 내용은 상담을
+              통해 안내해 드리고 있습니다.
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-title">
+              체험 수업이 가능한가요?<span class="icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              네, 가능합니다. 첫 수업을 무료로 체험해 보실 수 있습니다.
+              홈페이지나 전화로 예약해 주세요.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div>
+          <h3>연락처</h3>
+          <p>전화: 02-1234-5678</p>
+          <p>이메일: info@academy.com</p>
+        </div>
+        <div>
+          <h3>바로가기</h3>
+          <a href="#about">학원 소개</a>
+          <a href="#programs">수업 프로그램</a>
+          <a href="#faq">질의응답</a>
+        </div>
+      </div>
+      <p>© 2024 드림인 수학영어. All rights reserved.</p>
+    </footer>
+    <!-- 로그인 모달 -->
+    <div id="loginModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span id="closeModal" class="close-btn">&times;</span>
+        <h2>로그인</h2>
+        <form id="loginForm">
+          <label for="email">이메일:</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="이메일 입력"
+            required
+          />
+
+          <label for="password">비밀번호:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="비밀번호 입력"
+            required
+          />
+
+          <button type="submit" class="submit-btn">로그인</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
